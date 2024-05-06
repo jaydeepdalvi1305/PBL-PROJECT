@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Panels</title>
+<link rel="stylesheet" href="createpanel.css">
+<link rel="stylesheet" href="vote.css">
+<style>
+ .panel {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+ }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<script src="createpanel.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="panelCtrl">
+   <nav>
+      <label class="logo">Online Voting System</label>
+       <ul><li><a href="vote.html">Home</a></li>
+        <li><a href="">About Us </a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Feedback</a></li>
+       </ul>
+   </nav>                                                                                                                         
+ <div ng-repeat="panel in panels" class="panel">
+    <h2>{{ panel.name }}</h2><br><br> 
+    
+    <button ng-click="deletePanel($index)">Delete</button>
+ </div>
+ <div class="label"><br>
+    <label> <b>Add new panel:</b></label>
+    <input type="text" ng-model="panelName" /><br>
+    <button ng-click="addPanel()">Add</button>
+ </div>
+</body>
+</html>

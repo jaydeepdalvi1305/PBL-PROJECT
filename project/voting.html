@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="vote.css">
+
+</head>
+<body>
+	 
+	 <nav>
+          <label class="logo">Online Voting System</label>
+           <ul><li><a href="vote.html">Home</a></li>
+            <li><a href="Aboutus.html">About Us </a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+           </ul>
+       </nav>
+    <h1 align="center">VOTE HERE!!</h1>
+    <div class="party" id="AAP">
+        <h2>AAP</h2>
+        <p>Votes: <span id="party1Votes">0</span></p>
+        <button  id="button1" onclick="vote('AAP')">Vote</button>
+    </div>
+    <div class="party" id="BJP">
+        <h2>BJP</h2>
+        <p>Votes: <span id="party2Votes">0</span></p>
+        <button id="button1" onclick="vote('BJP')">Vote</button>
+    </div>
+    <div class="party" id="CONGRESS">
+        <h2>CONGRESS</h2>
+        <p>Votes: <span id="party3Votes">0</spa></p>
+        <button id="button1" onclick="vote('CONGRESS')">Vote</button>
+    </div>
+    <script src="vote.js"></script>
+</body>
+</html>
